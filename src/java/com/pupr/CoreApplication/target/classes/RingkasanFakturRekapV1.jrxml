@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RingkasanFaktur" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4428973b-787d-4cdc-b89a-c05bd0718c5c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="sumberAnggaran" class="java.lang.String"/>
+	<parameter name="noDpa" class="java.lang.String"/>
+	<parameter name="tglDpa" class="java.lang.String"/>
+	<parameter name="noSirup" class="java.lang.String"/>
+	<parameter name="program" class="java.lang.String"/>
+	<parameter name="kegiatan" class="java.lang.String"/>
+	<parameter name="subKegiatan" class="java.lang.String"/>
+	<parameter name="pekerjaan" class="java.lang.String"/>
+	<parameter name="lokasi" class="java.lang.String"/>
+	<parameter name="noSpk" class="java.lang.String"/>
+	<parameter name="tglSpk" class="java.lang.String"/>
+	<parameter name="adendum" class="java.lang.String"/>
+	<parameter name="namaPerusahaan" class="java.lang.String"/>
+	<parameter name="alamatPerusahaan" class="java.lang.String"/>
+	<parameter name="pimpinanPerusahaan" class="java.lang.String"/>
+	<parameter name="npwp" class="java.lang.String"/>
+	<parameter name="nomorRekeningPerusahaan" class="java.lang.String"/>
+	<parameter name="bank" class="java.lang.String"/>
+	<parameter name="nilaiSpk" class="java.lang.String"/>
+	<parameter name="nilaiBap" class="java.lang.String"/>
+	<parameter name="uraian" class="java.lang.String"/>
+	<parameter name="tipePembayaran" class="java.lang.String"/>
+	<parameter name="noBastp" class="java.lang.String"/>
+	<parameter name="jangkaWaktuPelaksanaan" class="java.lang.String"/>
+	<parameter name="tglPenyelesaian" class="java.lang.String"/>
+	<parameter name="jangkaWaktuPemeliharaan" class="java.lang.String"/>
+	<parameter name="ppkName" class="java.lang.String"/>
+	<parameter name="nipPpk" class="java.lang.String"/>
+	<parameter name="kodeRekening" class="java.lang.String"/>
+	<parameter name="belanja" class="java.lang.String"/>
+	<parameter name="parameterPembayaran" class="java.lang.String"/>
+	<parameter name="tglBastp" class="java.lang.String"/>
+	<parameter name="kodeSubKegiatan" class="java.lang.String"/>
+	<parameter name="noBap" class="java.lang.String"/>
+	<parameter name="tglBap" class="java.lang.String"/>
+	<parameter name="bankCode" class="java.lang.String"/>
+	<parameter name="noRekom" class="java.lang.String"/>
+	<parameter name="tglRekom" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="35" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="-6" width="551" height="41" forecolor="#050505" backcolor="rgba(255, 255, 255, 0.68235296)" uuid="6ddc5bb2-8e8b-4899-8466-8da7eacca21b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="310" y="1" width="229" height="29" uuid="0f790bb2-b2e3-42a0-bde5-9265fbcc6544"/>
+			</rectangle>
+			<image>
+				<reportElement x="11" y="-2" width="37" height="36" uuid="0e873c61-e223-4ce0-aa82-9bb09a2c42db"/>
+				<imageExpression><![CDATA["Logo-Kabupaten-Subang.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="330" y="1" width="210" height="28" uuid="f42e5e4f-6321-4fa4-ba4e-e52cb92ead3a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[RINGKASAN KONTRAK]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="6" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="738" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="11" y="4" width="140" height="15" uuid="641157a4-3c82-4ec8-b87e-8d6b759e8f58"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[SUMBER DANA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="43" width="140" height="16" uuid="f580ef57-0096-410e-bb50-422b6b18190f"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[1. Nomor dan tanggal DPA/DPPA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="86" width="170" height="16" uuid="5530810a-3bce-40df-a87d-dcd3005432ac"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[2. Kode RUP / SIRUP / E-Kontrak]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="114" width="120" height="17" uuid="a5ae4691-c885-4e3e-86ec-c23c1aa0b4f0"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[3. SUB KEGIATAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="178" width="209" height="20" uuid="5fee56a1-f4bf-4563-bde3-d562dbd7b393"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[4. Nomor dan tanggal SPK/Kontrak]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="216" width="120" height="20" uuid="dac69ea3-998a-4196-8c05-1016b0ced7b9"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[5. Nama perusahaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="242" width="120" height="20" uuid="87beb416-b2f1-42b8-9171-c88e77f5eb4e"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[6. Alamat perusahaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="276" width="120" height="20" uuid="f749deb0-ad9a-4583-a652-c87780ce090b"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[7. Nomor rekening perusahaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="300" width="120" height="20" uuid="59f4a489-fc6f-45f9-bf45-33fdd0987a5c"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[8. Bank]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="327" width="120" height="20" uuid="2c1ceec7-37e3-42a5-ba39-e5587ff82257"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[9. Nilai SPK/Kontrak]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="351" width="120" height="20" uuid="a0198ed7-5742-4085-abf1-6f2e09bc19a2"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[10. Uraian dan volume pekerjaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="384" width="120" height="20" uuid="30034986-8903-4616-8726-053e9647f2d1"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[11. Cara pembayaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="407" width="166" height="20" uuid="dee2266f-98ef-4544-83a9-490e1b9ba90a"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[12. Jangka waktu pelaksanaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="430" width="154" height="20" uuid="54877bf0-7ee6-46cd-aea3-eb30b247cd99"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[13. Tanggal penyelesaian pekerjaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="453" width="180" height="20" uuid="85713db0-6ca0-4bb2-a696-2f7575ea6d13"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[14. Jangka waktu pemeliharaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="474" width="120" height="20" uuid="52837dd3-8dcb-4453-9a56-c4a0cd0a6b30"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[15. Ketentuan Sanksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="605" width="120" height="10" uuid="26a3db17-3cdf-45c1-b6be-ccc991a1ba55"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[a.n. Pengguna Anggaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="615" width="120" height="10" uuid="61698cbb-7081-48c9-95bd-4ff581bf8610"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Pejabat Pembuat Komitmen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="583" width="143" height="10" uuid="5e570df5-7409-470c-85fd-23e81e690926"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Subang,.......................................]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="242" y="5" width="307" height="14" uuid="46d7282c-1272-4a3f-9d56-7f3f9f8bafc5"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Verdana" size="10" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sumberAnggaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="43" width="305" height="16" uuid="7c0936a8-66df-4cca-9e84-4d51043db1ac"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noDpa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="86" width="225" height="16" uuid="ffea8941-be24-4da1-a556-92266012fc97"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noSirup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="131" width="307" height="40" uuid="0137e8f8-1a64-4b8a-8d49-2b74bb7dae87"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{subKegiatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="178" width="307" height="20" uuid="bfe2fb14-1e4d-469a-8fc5-a047689c7752"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noSpk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="216" width="289" height="20" uuid="73bb78f0-e01f-46be-8e4f-375e5def39ac"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namaPerusahaan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="242" width="300" height="30" uuid="e6fed542-f9b0-48ba-8ccd-a59defb8bf5d"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alamatPerusahaan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="276" width="289" height="20" uuid="3ea8f39a-79cc-4ba1-9ab3-9525a94cd88b"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomorRekeningPerusahaan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="327" width="300" height="20" uuid="0e44ad4a-bd68-43cf-b165-1fc1a2a8effa"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nilaiSpk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="351" width="301" height="30" uuid="0bfa4373-bc68-4907-bc17-b3ae12714141"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{uraian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="384" width="298" height="20" uuid="bc244baa-a8c8-4ba6-8d42-8e3234eddda1"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tipePembayaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="407" width="300" height="20" uuid="e6ef3af5-a4f7-4e01-96a6-be3727699e85"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{jangkaWaktuPelaksanaan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="430" width="300" height="20" uuid="9effc542-461d-4f95-93dc-820a65e8f33f"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tglPenyelesaian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="453" width="300" height="20" uuid="c44d5772-6051-44b6-85ce-cb8ad4c02c0b"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{jangkaWaktuPemeliharaan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="60" width="177" height="16" uuid="4a4b6519-c54e-4183-87d8-fba09025506c"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tglDpa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="199" width="175" height="14" uuid="c272d937-796d-418c-856a-7de5dfedbcfe"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tglSpk}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="238" y="111" width="3" height="16" uuid="a8f0ad84-f684-460d-a2ea-3644eb37c0e3"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="242" y="111" width="307" height="16" uuid="9b14b700-71bf-47a2-8066-01cf9b0fe4d5"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kodeSubKegiatan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="491" width="218" height="20" uuid="4acdb539-572e-4f65-aaa6-88dfd04b7d03"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[16. Nomor dan Tanggal Rekom Belanja Modal]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="242" y="491" width="224" height="20" uuid="a917beca-bde6-46d9-a074-d4a0d510c27a"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noRekom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="514" width="308" height="20" uuid="38268cff-c5af-4fe5-bd5f-4557a3094ad1"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noBap}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="514" width="218" height="20" uuid="61158c36-9d4b-48c1-b4b6-9a43285248ba"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[17. Nomor dan Tanggal BAP]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="243" y="538" width="308" height="20" uuid="4ec6ac5a-ea34-4289-a6ff-85e0cf3154c9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noBastp}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="538" width="217" height="20" uuid="2eb65885-05e0-4848-9ec5-f73b387153d7"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[18. Nomor dan Tanggal BASTP/BASTB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="605" width="120" height="10" uuid="651e9bee-248e-4576-bf61-682f5242dbc3"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Tanggal :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="585" width="143" height="10" uuid="ed19e523-870c-4095-86ec-6c5d11625848"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<text><![CDATA[Berkas Kontrak diserahkan kembali]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="-34" width="1" height="738" uuid="e5ab1973-70bd-4061-9b4e-9000d18aa73e"/>
+			</line>
+			<textField>
+				<reportElement x="243" y="300" width="289" height="20" uuid="d95816ce-9ff4-4694-8c45-28c2641db6ec"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bankCode}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="340" y="688" width="209" height="1" uuid="713b6cd3-a14a-4bf7-8dc4-ea460c208d13">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="340" y="691" width="209" height="10" uuid="e683bd15-cfa9-4963-b98f-4a5d0e9a7709"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Verdana" size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nipPpk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="674" width="209" height="10" uuid="99f948e2-df12-421b-a801-f7d310a3018e"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Verdana" size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ppkName}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="31" y="690" width="111" height="1" uuid="e0afb8a7-a9df-4d51-a00b-55352a3e2924">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="0" y="703" width="551" height="1" uuid="191a2dea-92af-422b-9ed9-cb5fab0f8536"/>
+			</line>
+			<staticText>
+				<reportElement mode="Transparent" x="10" y="710" width="141" height="10" forecolor="#A3A3A3" uuid="16d2b70f-771a-4232-871e-93305f3baed6"/>
+				<textElement>
+					<font fontName="Verdana" size="6" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SIAP-KEUN V.1 DPUPR KAB. SUBANG]]></text>
+			</staticText>
+			<line>
+				<reportElement x="551" y="-34" width="1" height="738" uuid="8db2a6df-db3f-4c18-a1f8-eda8358616cf"/>
+			</line>
+			<staticText>
+				<reportElement x="238" y="491" width="3" height="20" uuid="52f652d8-caa8-4655-b4b5-37adaf4ce05f"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="514" width="3" height="20" uuid="ad591d99-1976-4569-a58b-80a01648c3f9"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="538" width="3" height="20" uuid="879db3e4-3a2c-44a1-bc6d-6ff113050f82"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="453" width="3" height="20" uuid="1736536c-9a64-42c8-b944-2da7c5737bf4"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="430" width="3" height="20" uuid="10987dbc-9d4a-414c-a92c-4e8615108ce3"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="407" width="3" height="20" uuid="20d5c3c5-5133-44f3-91eb-387657f64f63"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="384" width="3" height="20" uuid="2e4e4e0b-ec02-44a6-bead-07139362c655"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="351" width="3" height="20" uuid="00047ec6-1c0c-489e-bf3a-c5ee035e356a"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="327" width="3" height="20" uuid="3e57ab61-92dd-430f-940a-010137023d23"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="300" width="3" height="20" uuid="03877bdd-860d-4ea0-be1c-d087a7fa900a"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="276" width="3" height="20" uuid="f37698b7-07af-4d5a-826c-9c69767dbc52"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="242" width="3" height="20" uuid="c8583701-1327-43d5-abcd-0494d73d0ec2"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="216" width="3" height="20" uuid="451bae42-8abb-4b6d-abca-08c7ef8456dd"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="199" width="3" height="14" uuid="25c234af-29f5-4265-9f2c-521f450be3cd"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="178" width="3" height="20" uuid="08e566f7-d227-418a-95bd-d3611c3c60a9"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="131" width="3" height="20" uuid="edf60ab7-edaa-4f14-8cec-42dbe153bf22"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="86" width="3" height="16" uuid="10792b8b-14b7-4d32-b120-4eb73c585346"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="60" width="3" height="16" uuid="cc334ac8-a0c3-4e6c-a353-1feaa20afd52"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="43" width="3" height="16" uuid="60b403ff-f21a-4f8d-b42c-c4a8ffcffada"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="5" width="3" height="16" uuid="a001bb47-0725-4960-b978-9fa009338a18"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="467" y="491" width="80" height="20" uuid="746beb94-6ead-4d4f-ae14-dc03a9278293"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Verdana" size="9" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tglRekom}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="6" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="4" splitType="Stretch"/>
+	</summary>
+</jasperReport>

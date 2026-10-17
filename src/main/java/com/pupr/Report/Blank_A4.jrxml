@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Kwitansi_Faktur" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d5c5062e-5407-42c2-9c24-177288518394">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="sumberAnggaran" class="java.lang.String">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="sumberAnggaran"/>
+	</field>
+	<field name="terbilang" class="java.lang.String"/>
+	<field name="desc" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="7" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="15" width="210" height="30" uuid="a56180ae-f5ad-492f-a1be-1ff6e9fc0b59"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KABUPATEN SUBANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="15" width="160" height="19" uuid="668d8e13-01f7-448e-b31c-38a2120e96ae"/>
+				<text><![CDATA[Kode Rekening : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="60" width="210" height="19" uuid="12d90e2c-d951-460c-94af-ae56c8ff105c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[KWITANSI]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="7" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="162" splitType="Stretch">
+			<staticText>
+				<reportElement x="16" y="10" width="103" height="19" uuid="bb6706e2-0e3d-4645-8c32-199265a60a2d"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[Telah Terima : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="29" width="103" height="19" uuid="dba7623c-ca5c-41ca-918b-99ee98bff817"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[Uang Sejumlah :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="48" width="104" height="19" uuid="a5f2b4c2-9a3e-4ce5-81d9-a09265f31a07"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[Untuk Pembayaran  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="10" width="360" height="18" uuid="46aca8c3-0f07-4b73-94d0-09b46d099075"/>
+				<textFieldExpression><![CDATA[$F{sumberAnggaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="29" width="360" height="18" uuid="0b573d7d-b9e2-48dd-b0e8-c6507cd11e8b"/>
+				<textFieldExpression><![CDATA[$F{terbilang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="49" width="360" height="18" uuid="0d5795c8-2df4-4e1a-87e0-a68028288b4f"/>
+				<textFieldExpression><![CDATA[$F{desc}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

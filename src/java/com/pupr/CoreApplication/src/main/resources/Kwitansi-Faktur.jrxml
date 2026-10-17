@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Kwitansi_Faktur" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d5c5062e-5407-42c2-9c24-177288518394">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="sumberAnggaran" class="java.lang.String"/>
+	<parameter name="terbilang" class="java.lang.String"/>
+	<parameter name="desc" class="java.lang.String"/>
+	<parameter name="namaKepalaBidang" class="java.lang.String"/>
+	<parameter name="nipKepalaBidang" class="java.lang.String"/>
+	<parameter name="namaPpk" class="java.lang.String"/>
+	<parameter name="nipPpk" class="java.lang.String"/>
+	<parameter name="namaPptk" class="java.lang.String"/>
+	<parameter name="nipPptk" class="java.lang.String"/>
+	<parameter name="namaBpp" class="java.lang.String"/>
+	<parameter name="nipBpp" class="java.lang.String"/>
+	<parameter name="namaPerusahaan" class="java.lang.String"/>
+	<parameter name="namaDirektur" class="java.lang.String"/>
+	<parameter name="nipDirektur" class="java.lang.String"/>
+	<parameter name="bapAmount" class="java.lang.String"/>
+	<parameter name="tglkwitansi" class="java.lang.String"/>
+	<parameter name="kodeRekening" class="java.lang.String"/>
+	<parameter name="bidang" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="sumberAnggaran" class="java.lang.String"/>
+	<field name="terbilang" class="java.lang.String"/>
+	<field name="desc" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="6" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout"/>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="5" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="8" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="361" splitType="Stretch">
+			<staticText>
+				<reportElement x="16" y="117" width="106" height="19" uuid="4b266efe-5914-4fe2-85c2-d6d23afd87ca"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Untuk Pembayaran]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="118" width="580" height="60" uuid="2948c263-4fa9-47ae-a558-259b5917bc40"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{desc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="93" width="106" height="19" uuid="7a083e54-2a7c-4f17-bf23-7afef247ff11"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Uang Sejumlah]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="93" width="550" height="18" uuid="f17c4cde-e822-44c6-8942-25cac0849bb3"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{terbilang}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="68" width="105" height="16" uuid="1825c98b-2a2d-4070-a6a3-3e41435d07c7"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telah terima  dari      ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="68" width="550" height="16" uuid="f753fe73-e626-4bdb-9cb8-8d7464764451"/>
+				<textElement>
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sumberAnggaran}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="180" width="540" height="20" forecolor="#FFFFFF" backcolor="rgba(161, 161, 161, 0.68235296)" uuid="4456dd3b-a69b-4eff-8f6e-e47d16a0de3e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="40" y="183" width="82" height="19" uuid="6206d064-ceda-4373-b2d6-bf36f697bb0e"/>
+				<textElement textAlignment="Right">
+					<font fontName="Verdana" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jumlah Rp.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="0" y="351" width="120" height="10" forecolor="#A3A3A3" uuid="37e19fb8-0498-4fce-8081-538527d95e54"/>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[diprint oleh sip-keun web]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="227" width="132" height="30" uuid="ffa6eadd-4331-4fb5-adba-dcb2b86f8a8d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<text><![CDATA[Dinas Pekerjaan Umum dan Penataan Ruang Sebagai Kuasa Pengguna Anggaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="227" width="98" height="20" uuid="c3b1ed03-feae-4abd-8f0d-f63d3c2420b7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<text><![CDATA[Pejabat Pembuat Komitmen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="227" width="112" height="20" uuid="5c8225b0-93ac-4695-90a5-71a978acf75e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<text><![CDATA[Pejabat Pelaksana Teknis Kegiatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="483" y="227" width="122" height="20" uuid="12f7b0b5-ebcb-47c8-a00b-95579b0fcef1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<text><![CDATA[Bendahara Pengeluaran Pembantu]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="7" y="316" width="144" height="10" uuid="de590877-ed39-4298-8914-22e8fb370fbe"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namaKepalaBidang}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="13" y="327" width="132" height="1" uuid="a6ca9554-aadb-4973-ab11-518f065fca08">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="13" y="328" width="132" height="10" uuid="87b423b7-b198-4ba7-bacb-8cae42eb3e12"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nipKepalaBidang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="316" width="144" height="10" uuid="c727cd64-738e-4129-8e9d-a059d5b73aaa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namaPpk}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="166" y="327" width="128" height="1" uuid="fa47bfe5-2bdf-48ce-9a51-0335aac8f5ac">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="166" y="328" width="128" height="10" uuid="bc5f5b8e-0470-4aa8-9165-c74fef1ae04f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nipPpk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="316" width="154" height="10" uuid="58494c68-c3ed-4b50-a5c1-6c29b0ad8f2d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namaPptk}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="319" y="327" width="132" height="1" uuid="80c0a0ea-c194-401f-a218-5993fb87c402">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="319" y="328" width="132" height="10" uuid="2374b7d1-daeb-4d21-a22b-8c51e87ad789"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nipPptk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="464" y="316" width="158" height="10" uuid="282504fc-ffbe-47f9-8617-47f5ff92ed41"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namaBpp}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="466" y="327" width="138" height="1" uuid="55ce2eed-0c9e-43d8-960c-e335641bc5f9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="474" y="328" width="138" height="10" uuid="86241129-bb7a-4d7a-81ee-5f2790ab621c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nipBpp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="632" y="316" width="138" height="10" uuid="b25e0220-4b1d-4a4c-925b-f213dfe5a96d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namaDirektur}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="632" y="327" width="138" height="1" uuid="daa912f0-6bb3-47f5-8a18-d85d96926d83">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="629" y="227" width="140" height="20" uuid="9061fac5-79aa-420a-91c7-365182f0785b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namaPerusahaan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="122" y="183" width="138" height="18" uuid="3df81ece-89a1-491b-9b25-3fe35a6b184c"/>
+				<textElement>
+					<font fontName="Verdana" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bapAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="627" y="207" width="138" height="10" uuid="4792b0c0-3ab0-46af-a98e-966475fcc6a1"/>
+				<textElement textAlignment="Right">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tglkwitansi}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="2" width="780" height="1" uuid="c5f6518a-85e8-4f1f-a9a4-517c05af5689">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="0" y="344" width="779" height="1" uuid="c58252a5-4329-4512-aa64-48ca45168d1e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="780" y="2" width="1" height="342" uuid="98895d70-e411-4b8d-8742-721980ab649c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="1" y="2" width="1" height="342" uuid="9f080c03-9236-4549-ad76-001a9b0a2421">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<rectangle>
+				<reportElement x="0" y="40" width="779" height="20" forecolor="#FFFFFF" backcolor="rgba(120, 113, 113, 0.68235296)" uuid="dd093fde-0712-4ae4-81ef-ae4b9a42fadf"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="290" y="41" width="82" height="19" forecolor="#FFFFFF" uuid="2e2bf1bc-1e0a-4717-b80d-1852668023e9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KWITANSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="10" width="210" height="30" uuid="a7912b88-c00d-4680-8e13-437591058aaf"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KABUPATEN SUBANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="508" y="10" width="260" height="30" uuid="67187189-0a64-4d87-bc3f-26354f36cbbd"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Rekening : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="630" y="328" width="138" height="14" uuid="fc8ca6de-7f6f-412c-91d9-50cc8ce1a975"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<text><![CDATA[DIREKTUR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="204" width="120" height="10" uuid="26c91837-7354-467d-a9ea-44c78edcb645"/>
+				<textElement>
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<text><![CDATA[Mengetahui / menyetujui :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="68" width="3" height="16" uuid="3fbcd0a5-d2dc-4493-86af-4813e3a63caf"/>
+				<textElement textAlignment="Right">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="93" width="3" height="18" uuid="55023270-62ff-41bb-b476-449a891cfb6a"/>
+				<textElement textAlignment="Right">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="117" width="3" height="18" uuid="e96e8a62-9c7d-4ab6-a023-969697a8b325"/>
+				<textElement textAlignment="Right">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="588" y="20" width="178" height="16" uuid="9c500ee1-7c5c-46d9-bc9f-909b960e79b1"/>
+				<textElement>
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kodeRekening}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="13" y="217" width="132" height="13" uuid="9e54f3f6-429e-4203-857d-f752b7e51355"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bidang}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="14" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="14" splitType="Stretch"/>
+	</summary>
+</jasperReport>
